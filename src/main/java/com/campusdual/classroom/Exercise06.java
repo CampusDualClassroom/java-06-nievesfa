@@ -9,9 +9,24 @@ public class Exercise06 {
         Calendar now = Calendar.getInstance();
         int month = now.get(Calendar.MONTH) + 1;
         int hour = now.get(Calendar.HOUR_OF_DAY);
+
+        //checkHour(1);
+        //checkHour(9);
+        //checkHour(15);
+        //checkHour(22);
+        //checkHour(26);
+        checkHour(hour);
+
+        //checkSeason(2);
+        //checkSeason(5);
+        //checkSeason(8);
+        //checkSeason(11);
+        //checkSeason(13);
+        checkSeason(month);
+
     }
 
-    //TODO ↓
+
     // Si la hora es desde las 0:00 a las 6:59, imprimir por pantalla → It's night
     // Si la hora es desde las 7:00 a las 13:59, imprimir por pantalla → It's morning
     // Si la hora es desde las 14:00 a las 20:59, imprimir por pantalla → It's afternoon
@@ -30,6 +45,8 @@ public class Exercise06 {
                 case 5:
                 case 6: {
 
+                    System.out.println("It's night");
+                    break;
                 }
                 case 7:
                 case 8:
@@ -39,6 +56,8 @@ public class Exercise06 {
                 case 12:
                 case 13: {
 
+                    System.out.println("It's morning");
+                    break;
 
                 }
                 case 14:
@@ -49,6 +68,8 @@ public class Exercise06 {
                 case 19:
                 case 20: {
 
+                    System.out.println("It's afternoon");
+                    break;
 
                 }
                 default:
@@ -57,7 +78,6 @@ public class Exercise06 {
         }
     }
 
-    //TODO ↓
     // Si es Enero, Febrero o Marzo, imprimir por pantalla → Winter
     // Si es Abril, Mayo o Junio, imprimir por pantalla → Spring
     // Si es Julio, Agosto o Septiembre, imprimir por pantalla → Summer
@@ -67,30 +87,34 @@ public class Exercise06 {
             case 1:
             case 2:
             case 3: {
-
+                System.out.println("Winter");
+                break;
 
             }
             case 4:
             case 5:
             case 6: {
-
+                System.out.println("Spring");
+                break;
 
             }
             case 7:
             case 8:
             case 9: {
-
+                System.out.println("Summer");
+                break;
 
             }
             case 10:
             case 11:
             case 12: {
-
+                System.out.println("Autumn");
+                break;
 
             }
             default:
                 throw new IllegalArgumentException("Unexpected value: " + month);
         }
-    }
 
+    }
 }
